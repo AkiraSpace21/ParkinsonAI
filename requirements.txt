@@ -1,0 +1,11 @@
+librosa
+praat-parselmouth
+scipy
+numpy
+pandas
+scikit-learn
+xgboost
+matplotlib
+seaborn
+gradio
+soundfile
