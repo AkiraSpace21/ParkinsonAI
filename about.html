@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Parkinson Voice Screening</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-header-inner">
+    <div class="brand">
+      <span class="brand-name">Parkinson Voice Screening</span>
+      <span class="brand-sub">Voice-based research screening platform</span>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="screening.html">Screening</a>
+      <a href="history.html">History</a>
+      <a href="compare.html">Compare</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="header-actions">
+      <a href="settings.html" class="icon-link" aria-label="Settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.04 1.56V21a2 2 0 0 1-4 0v-.09A1.7 1.7 0 0 0 8.96 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.56-1.04H3a2 2 0 0 1 0-4h.09A1.7 1.7 0 0 0 4.6 8.96a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34H9a1.7 1.7 0 0 0 1.04-1.56V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1.04 1.56 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87V9c.14.62.6 1.13 1.56 1.04H21a2 2 0 0 1 0 4h-.09a1.7 1.7 0 0 0-1.51 1.96z"/></svg>
+      </a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="section-heading">
+    <h1>About this application</h1>
+  </div>
+
+  <section class="about-section">
+    <h2>What it does</h2>
+    <p>
+      This application screens short voice recordings for acoustic patterns that research
+      has associated with Parkinson's disease. You record or upload a sample of sustained
+      speech, and the system returns a probability estimate along with the underlying
+      acoustic measurements it computed.
+    </p>
+  </section>
+
+  <section class="about-section">
+    <h2>How voice analysis works</h2>
+    <p>
+      Parkinson's disease can affect the muscles used for speech, which sometimes shows up
+      as small, measurable changes in voice quality — reduced pitch variation, irregularity
+      in vocal fold vibration, or a breathier tone. Acoustic analysis tools can pick up on
+      some of these changes even when they're not obvious to the ear.
+    </p>
+  </section>
+
+  <section class="about-section">
+    <h2>Acoustic features used</h2>
+    <p>The screening model is built on features extracted directly from the recording:</p>
+    <ul>
+      <li><strong>Fundamental frequency (F0)</strong> — the perceived pitch of the voice, and how much it varies</li>
+      <li><strong>Jitter</strong> — cycle-to-cycle variation in pitch period</li>
+      <li><strong>Shimmer</strong> — cycle-to-cycle variation in amplitude</li>
+      <li><strong>Harmonics-to-noise ratio (HNR)</strong> — the balance between periodic voice signal and noise</li>
+      <li><strong>MFCCs and spectral descriptors</strong> — a broader representation of the voice's spectral shape, commonly used in speech analysis</li>
+    </ul>
+  </section>
+
+  <section class="about-section">
+    <h2>How the screening model works</h2>
+    <p>
+      The extracted features are scaled using statistics from the model's training data, then
+      passed to a trained classifier. The classifier outputs a probability that the recording's
+      acoustic pattern is more consistent with recordings labeled Parkinson's than with recordings
+      labeled healthy in its training data. A probability at or above 50% is reported as an
+      elevated pattern indication; below that, as a typical pattern indication.
+    </p>
+  </section>
+
+  <section class="about-section">
+    <h2>Limitations</h2>
+    <ul>
+      <li>This is a research screening tool, not a diagnostic instrument. A result in either direction is not a medical conclusion.</li>
+      <li>Model performance depends on the size and diversity of its training dataset. Results may be less reliable for voices, accents, or recording conditions not well represented in training.</li>
+      <li>Background noise, microphone quality, and recording length can all affect the accuracy of the extracted features.</li>
+      <li>The model was not validated as a clinical diagnostic device and has not undergone regulatory review.</li>
+    </ul>
+  </section>
+
+  <section class="about-section">
+    <h2>Research purpose</h2>
+    <p>
+      This application exists to demonstrate an end-to-end voice screening pipeline — from
+      audio capture through feature extraction to model inference — for research and academic
+      purposes. It is not intended for clinical use or for making decisions about anyone's
+      medical care.
+    </p>
+  </section>
+
+  <section class="about-section">
+    <h2>Privacy</h2>
+    <p>
+      Recordings submitted for screening are processed to extract acoustic features and produce
+      a result. Screening history shown in this application is held only in server memory for
+      the current session and is cleared when the server restarts. Review your deployment's own
+      data handling practices before using this application with recordings of real individuals.
+    </p>
+  </section>
+</main>
+
+<footer class="app-footer">
+  <div class="app-footer-inner">
+    <span>Parkinson Voice Screening — research prototype. Not a medical device.</span>
+    <span>Version 0.1, local instance</span>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+</body>
+</html>

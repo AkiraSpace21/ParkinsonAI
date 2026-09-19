@@ -1,3 +1,6 @@
+fastapi
+uvicorn[standard]
+python-multipart
 librosa
 praat-parselmouth
 scipy
@@ -5,7 +8,5 @@ numpy
 pandas
 scikit-learn
 xgboost
-matplotlib
-seaborn
-gradio
 soundfile
+joblib

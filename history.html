@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History — Parkinson Voice Screening</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-header-inner">
+    <div class="brand">
+      <span class="brand-name">Parkinson Voice Screening</span>
+      <span class="brand-sub">Voice-based research screening platform</span>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="screening.html">Screening</a>
+      <a href="history.html">History</a>
+      <a href="compare.html">Compare</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="header-actions">
+      <a href="settings.html" class="icon-link" aria-label="Settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.04 1.56V21a2 2 0 0 1-4 0v-.09A1.7 1.7 0 0 0 8.96 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.56-1.04H3a2 2 0 0 1 0-4h.09A1.7 1.7 0 0 0 4.6 8.96a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34H9a1.7 1.7 0 0 0 1.04-1.56V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1.04 1.56 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87V9c.14.62.6 1.13 1.56 1.04H21a2 2 0 0 1 0 4h-.09a1.7 1.7 0 0 0-1.51 1.96z"/></svg>
+      </a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="section-heading">
+    <h1>Screening history</h1>
+    <p>Screenings recorded in this server session. History is not persisted across server restarts in this research build.</p>
+  </div>
+
+  <div class="card">
+    <div class="table-toolbar">
+      <input type="text" class="search-input" id="search-input" placeholder="Search by screening ID or result…">
+      <span class="badge badge-neutral" id="row-count">0 screenings</span>
+    </div>
+
+    <div id="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th class="mono">Screening ID</th>
+            <th class="mono">Patient ID</th>
+            <th>Date</th>
+            <th>Duration</th>
+            <th>Result</th>
+            <th>Probability</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="history-body"></tbody>
+      </table>
+    </div>
+
+    <div class="empty-state" id="empty-state" style="display:none;">
+      <h3>No screenings recorded yet</h3>
+      <p>Screenings you run will appear here for the duration of this server session.</p>
+      <a href="screening.html" class="btn btn-primary" style="margin-top:16px;">Start a screening</a>
+    </div>
+  </div>
+</main>
+
+<footer class="app-footer">
+  <div class="app-footer-inner">
+    <span>Parkinson Voice Screening — research prototype. Not a medical device.</span>
+    <span>Version 0.1, local instance</span>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/api.js"></script>
+<script src="js/history.js"></script>
+</body>
+</html>

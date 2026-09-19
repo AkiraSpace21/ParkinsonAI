@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parkinson Voice Screening</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-header-inner">
+    <div class="brand">
+      <span class="brand-name">Parkinson Voice Screening</span>
+      <span class="brand-sub">Voice-based research screening platform</span>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="screening.html">Screening</a>
+      <a href="history.html">History</a>
+      <a href="compare.html">Compare</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="header-actions">
+      <a href="settings.html" class="icon-link" aria-label="Settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.04 1.56V21a2 2 0 0 1-4 0v-.09A1.7 1.7 0 0 0 8.96 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.56-1.04H3a2 2 0 0 1 0-4h.09A1.7 1.7 0 0 0 4.6 8.96a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34H9a1.7 1.7 0 0 0 1.04-1.56V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1.04 1.56 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87V9c.14.62.6 1.13 1.56 1.04H21a2 2 0 0 1 0 4h-.09a1.7 1.7 0 0 0-1.51 1.96z"/></svg>
+      </a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div>
+      <h1>Voice-based Parkinson's screening</h1>
+      <p class="hero-lede">
+        Analyze voice recordings for acoustic patterns associated with Parkinson's disease
+        using an automated research screening model built on jitter, shimmer, harmonic-to-noise
+        ratio, and spectral voice features.
+      </p>
+      <div class="hero-actions">
+        <a href="screening.html" class="btn btn-primary btn-lg">Start new screening</a>
+        <a href="about.html" class="btn btn-secondary btn-lg">Learn about the screening</a>
+      </div>
+    </div>
+
+    <div class="hero-figure">
+      <svg viewBox="0 0 340 200" width="100%" height="auto" role="img" aria-label="Voice waveform illustration">
+        <rect width="340" height="200" rx="8" fill="var(--surface-sunken)"/>
+        <g stroke="var(--accent)" stroke-width="2" stroke-linecap="round">
+          <line x1="30" y1="100" x2="30" y2="100"/>
+          <line x1="45" y1="88" x2="45" y2="112"/>
+          <line x1="60" y1="70" x2="60" y2="130"/>
+          <line x1="75" y1="94" x2="75" y2="106"/>
+          <line x1="90" y1="55" x2="90" y2="145"/>
+          <line x1="105" y1="80" x2="105" y2="120"/>
+          <line x1="120" y1="40" x2="120" y2="160"/>
+          <line x1="135" y1="65" x2="135" y2="135"/>
+          <line x1="150" y1="90" x2="150" y2="110"/>
+          <line x1="165" y1="50" x2="165" y2="150"/>
+          <line x1="180" y1="75" x2="180" y2="125"/>
+          <line x1="195" y1="35" x2="195" y2="165"/>
+          <line x1="210" y1="85" x2="210" y2="115"/>
+          <line x1="225" y1="60" x2="225" y2="140"/>
+          <line x1="240" y1="95" x2="240" y2="105"/>
+          <line x1="255" y1="45" x2="255" y2="155"/>
+          <line x1="270" y1="78" x2="270" y2="122"/>
+          <line x1="285" y1="92" x2="285" y2="108"/>
+          <line x1="300" y1="68" x2="300" y2="132"/>
+          <line x1="315" y1="98" x2="315" y2="102"/>
+        </g>
+        <line x1="20" y1="100" x2="320" y2="100" stroke="var(--border-strong)" stroke-width="1"/>
+      </svg>
+      <div class="divider"></div>
+      <div class="meta-field">
+        <div class="meta-label">Screening biomarkers</div>
+        <div class="meta-value">Jitter · Shimmer · HNR · F0 · MFCC spectrum</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="notice notice-strong" style="margin-bottom: 48px;">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+    <span>This application is intended for research and screening purposes only. It is not a medical diagnostic tool, and does not replace evaluation by a qualified healthcare professional.</span>
+  </div>
+
+  <section>
+    <div class="section-heading">
+      <h2>How the screening works</h2>
+      <p>Three steps, run entirely on the server processing your uploaded or recorded audio.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-tile">
+        <div class="tile-index">01</div>
+        <h3>Record or upload</h3>
+        <p>Capture a short sample of sustained speech directly in the browser, or upload an existing .wav recording.</p>
+      </div>
+      <div class="feature-tile">
+        <div class="tile-index">02</div>
+        <h3>Extract acoustic features</h3>
+        <p>The system computes jitter, shimmer, harmonics-to-noise ratio, fundamental frequency, and spectral descriptors from the recording.</p>
+      </div>
+      <div class="feature-tile">
+        <div class="tile-index">03</div>
+        <h3>Run the screening model</h3>
+        <p>A trained classifier compares the extracted features against learned patterns and returns a probability estimate.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="app-footer">
+  <div class="app-footer-inner">
+    <span>Parkinson Voice Screening — research prototype. Not a medical device.</span>
+    <span>Version 0.1, local instance</span>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+</body>
+</html>
