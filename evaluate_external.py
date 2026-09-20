@@ -36,7 +36,7 @@ def main():
 
     X_s = scaler.transform(X)  # transform only — never fit on external data
     probs = model.predict_proba(X_s)[:, 1]
-    preds = (probs >= 0.5).astype(int)  # same fixed threshold decided during training
+    preds = (probs >= 0.7).astype(int)  # same fixed threshold decided during training
 
     print(f"External subjects: {df['subject_id'].nunique()} | Recordings: {len(df)}")
     print("\n=== External validation (frozen model, no refitting) ===")
